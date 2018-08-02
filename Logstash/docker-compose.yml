@@ -15,6 +15,7 @@ services:
       - ./patterns:/opt/logstash/patterns
     extra_hosts:
        - "elasticsearch:192.168.1.103"
-#    external_links:
+#    external_links: 
+#    如果部署在同一台机器上，可以使用external_link
 #      - elasticsearch:elasticsearch
     command: logstash -f /config-dir
